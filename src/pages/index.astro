@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import TestimonialCard from "../components/TestimonialCard.astro";
+import avatar from "../assets/sarah-dole.png";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div
+      class="h-[812px] md:h-[1024px] w-[375px] md:w-[768px] xl:h-[768px] xl:w-[1024px] flex flex-col items-center bg-gradient-to-b from-gray-50 to-[#d2d6db] py-[200px]"
+    >
+      <TestimonialCard
+        name="Sarah Dole"
+        username="@sarahdole"
+        body="I've been searching for high-quality abstract images for my design projects, and I'm thrilled to have found this platform. The variety and depth of creativity are astounding!"
+      >
+        <Image src={avatar} alt="Sarah Dole" slot="image" />
+      </TestimonialCard>
+    </div>
+  </main>
+</Layout>
